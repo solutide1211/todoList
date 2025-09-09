@@ -33,7 +33,6 @@ jobs:
           draft: false
           files: |
             build/*.exe
-            build/*.zip
             build/*.yml
             build/*.blockmap
         env:
