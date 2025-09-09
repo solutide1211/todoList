@@ -12,6 +12,7 @@
     "dev": "electron-vite dev",
     "build": "dotenv -e .env -- electron-builder",
     "build:renderer": "electron-vite build",
+    "build:preload": "electron-vite build --mode preload",
     "build:main": "electron-vite build --mode main",
     "build:all": "npm run build:renderer && npm run build:main",
     "postinstall": "electron-builder install-app-deps",
