@@ -15,8 +15,8 @@ function createWindow() {
     ...(process.platform === 'linux' ? { icon } : {}),
     webPreferences: {
       preload: join(__dirname, '../preload/index.js'),
-      nodeIntegration: false,     // ✅ 必须为 false
-      contextIsolation: true,     // ✅ 必须为 true
+      nodeIntegration: false,
+      contextIsolation: true,
       sandbox: false
     },
     frame: false
