@@ -32,9 +32,9 @@ jobs:
         with:
           draft: false
           files: |
-            dist/*.exe
-            dist/*.zip
-            dist/*.yml
-            dist/*.blockmap
+            build/*.exe
+            build/*.zip
+            build/*.yml
+            build/*.blockmap
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
