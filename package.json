@@ -10,7 +10,7 @@
     "lint": "eslint --cache .",
     "start": "electron-vite preview",
     "dev": "electron-vite dev",
-    "build": "dotenv -e .env -- electron-builder",
+    "build": "electron-vite build",
     "postinstall": "electron-builder install-app-deps",
     "build:unpack": "npm run build && electron-builder --dir",
     "build:win": "npm run build && electron-builder --win",
@@ -46,33 +46,14 @@
     "vue-eslint-parser": "^10.2.0"
   },
   "build": {
-    "appId": "com.tools.desktop",
-    "productName": "dev-tools",
+    "appId": "com.example.todolist",
     "asar": true,
-    "copyright": "Copyright © 2025 electron",
-    "files": [
-      "build",
-      "dist-electron/preload",
-      "dist-electron/main",
-      "package.json"
-    ],
     "directories": {
       "output": "build"
     },
-    "extends": null,
-    "win": {
-      "target": [
-        {
-          "target": "nsis",
-          "arch": [
-            "x64"
-          ]
-        }
-      ],
-      "artifactName": "${productName}_${version}.${ext}"
-    },
-    "releaseInfo": {
-      "releaseNotes": "版本更新的具体内容"
-    }
+    "files": [
+      "out/**/*",
+      "package.json"
+    ]
   }
 }

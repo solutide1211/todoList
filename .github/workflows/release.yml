@@ -21,8 +21,8 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: buildUnpack
-        run: npm run build:unpack
+      - name: Build
+        run: npm run build
 
       - name: Build Windows App
         run: npm run build:win
