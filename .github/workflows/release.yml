@@ -21,14 +21,11 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Build Renderer (Vite)
-        run: npm run build:renderer
-
-      - name: Build Main Process (Electron)
-        run: npm run build:main # 👈 必须有这一步
+      - name: Build
+        run: npm run build
 
       - name: Build Windows App
-        run: npm run build:win # 或直接 npm run build
+        run: npm run build:win
 
       - name: Release
         uses: softprops/action-gh-release@v1
