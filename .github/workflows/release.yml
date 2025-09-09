@@ -21,17 +21,8 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: render
-        run: npm run build:render
-
-      - name: preload
-        run: npm run build:preload
-
-      - name: main
-        run: npm run build:main
-
-      - name: all
-        run: npm run build:all
+      - name: buildUnpack
+        run: npm run build:unpack
 
       - name: Build Windows App
         run: npm run build:win
