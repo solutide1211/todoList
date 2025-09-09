@@ -44,5 +44,35 @@
     "vite": "^7.0.5",
     "vue": "^3.5.17",
     "vue-eslint-parser": "^10.2.0"
+  },
+  "build": {
+    "appId": "com.tools.desktop",
+    "productName": "dev-tools",
+    "asar": true,
+    "copyright": "Copyright © 2025 electron",
+    "files": [
+      "build",
+      "dist-electron/preload",
+      "dist-electron/main",
+      "package.json"
+    ],
+    "directories": {
+      "output": "build"
+    },
+    "extends": null,
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "artifactName": "${productName}_${version}.${ext}"
+    },
+    "releaseInfo": {
+      "releaseNotes": "版本更新的具体内容"
+    }
   }
 }
